@@ -79,9 +79,9 @@ class Property
     private $postalCode;
 
     /**
-     * @ORM\Column(type="boolean", options={"default" = false})
+     * @ORM\Column(type="integer", options={"default" = 0})
      */
-    private $sold = false;
+    private $sold = 0;
 
     /**
      * @ORM\Column(type="datetime")
