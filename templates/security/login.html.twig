@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title 'Se connecter' %}
+
+{% block body %}
+<div class="container mt-4">
+
+    {% if error %}
+    <div class="alert alert-danger">
+        {# Permet d'avoir un message d'erreur lisible 'massagekey' et traduit (trans) #}
+        {{error.messagekey | trans(error.messagedata, 'security')}}
+    </div>
+
+    {% endif %}
+
+    <form class="" action="{{path('login')}}" method="post">
+        <div class="from-group">
+            <label for="username">Nom d'utilisateur :</label>
+            {# ne pas oublier l'underscore pour le name de l'input #}
+            <input type="text" id="username" name="_username" class="form-control" value="{{last_username}}">
+        </div>
+        <div class="from-group">
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="_password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary">Se connecter</button>
+    </form>
+</div>
+
+{% endblock %}

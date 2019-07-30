@@ -1,4 +1,6 @@
-
+# creation de la route pour la deconnexion utilisateur
+logout:
+    path: /logout
 
   #index:
   #    path: /
