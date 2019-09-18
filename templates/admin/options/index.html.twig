@@ -25,8 +25,8 @@
                 <tr>
                     <td>{{option.name}}</td>
                     <td>
-                        <a class="btn btn-secondary" href="{{ path('admin.property.edit', {id: option.id}) }}" role="button">Editer</a>
-                        <form method="post" action="{{ path('admin.property.delete', {id: option.id}) }}" class="d-inline-block" onsubmit="return confirm('Etes vous vraiment sûre ?')">
+                        <a class="btn btn-secondary" href="{{ path('admin.option.edit', {id: option.id}) }}" role="button">Editer</a>
+                        <form method="post" action="{{ path('admin.option.delete', {id: option.id}) }}" class="d-inline-block" onsubmit="return confirm('Etes vous vraiment sûre ?')">
                             <input type="hidden" name="_method" value="DELETE">
                             <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ option.id)}}">
                             <button class="btn btn-danger">Supprimer</button>
